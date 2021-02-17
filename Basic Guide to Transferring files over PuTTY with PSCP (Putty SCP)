@@ -1,0 +1,24 @@
+Installation and Setup:
+- Install PuTTY
+- Install PSCP
+- Open command prompt and type: set PATH="%PATH%;%ProgramFiles%\putty" (repace the quoted path with where you placed your pscp.exe file if it is not in C:\ProgramFiles\putty)
+- Control Panel > System Properties Advanced > Environmental Variables ... (you can search view advanced system settings alternatively)
+- Select Path and click Edit...
+- Click New and type in the path of which the pscp.exe file is located in (for example, again I placed mine in the default PuTTY location... so the path would be: C:\Program Files\putty)
+- Click ok, ok again, then ok to close out of system properties.
+- To test if setup is successful, open command prompt and type pscp
+- If setup is successful, you will see the details on PSCP such as version and command line options.
+
+
+Updating an already existing file on the linux machine (for my example, I am using a raspberry pi):
+- Open command prompt
+- Type the following command, replacing values appropriately for your machines and fies.
+- pscp -P [port number of machine here] [Path and file name of file you wish to transfer over to the machine] [user of machine]@[ip of machine]:[path and file name of destination]
+- Example:
+- pscp -P 22 Desktop\test.txt pi@[ip-goes-here]:ssh_test/test.txt
+- After hitting enter, you will be prompted for the password. Type password and hit enter.
+- Upon success, you should receive confirmation of file transfer. 
+- Example: test.txt                  | 0 kB |   0.1 kB/s | ETA: 00:00:00 | 100%
+
+
+
