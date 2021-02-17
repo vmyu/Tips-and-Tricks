@@ -31,4 +31,8 @@ Retrieving a file from linux machine via PSCP (from raspberry pi to windows):
 - Example: 
 - test.txt                  | 0 kB |   0.1 kB/s | ETA: 00:00:00 | 100%
 
-
+Retrieving a directory from linux machine via PSCP (from raspberry pi to windows): 
+- Follow the same steps as above except add -r to the command prompt line before the user information
+- example:
+- pscp -P 22 -r pi@[ip goes here]:ssh_test/test_folder Desktop\ssh
+- After confirming password, all files in the directory will transfer to destination.
