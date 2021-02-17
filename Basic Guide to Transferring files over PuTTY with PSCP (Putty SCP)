@@ -20,5 +20,15 @@ Updating an already existing file on the linux machine (for my example, I am usi
 - Upon success, you should receive confirmation of file transfer. 
 - Example: test.txt                  | 0 kB |   0.1 kB/s | ETA: 00:00:00 | 100%
 
+Retrieving a file from linux machine via PSCP (from raspberry pi to windows):
+- Open command prompt.
+-Type the following command, replacing values approrpiately
+- pscp -P [port number] [user]@[ip of machine]:[path and file of what we want to receive] [path and file of destination]
+-example:
+-pscp -P 22 pi@[ip goes here]:ssh_test/test.txt Desktop\test.txt
+- You will be prompted for password. Type password and hit enter.
+- Upon success, you sjould receive confirmation of file transfer.
+- Example: 
+- test.txt                  | 0 kB |   0.1 kB/s | ETA: 00:00:00 | 100%
 
 
